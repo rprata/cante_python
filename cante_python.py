@@ -24,7 +24,7 @@ def iriToUri(iri):
 r = requests.get(str_first_page)
 
 if r.status_code == 200:
-	
+
 	pos = 0
 	count = r.text.count(str_search)
 	for i in range(0, count):
@@ -42,7 +42,7 @@ if r.status_code == 200:
 
 #in next pages
 
-for i in range(41, 89):
+for i in range(1, 89):
 	r = requests.get(str_second_page_init + str(i) + str_second_page_last)
 
 	if r.status_code == 200:
